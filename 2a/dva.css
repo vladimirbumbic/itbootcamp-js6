@@ -1,0 +1,26 @@
+h2 {
+    color: red;
+    text-align: center;
+}
+
+img {
+    border-style: double;
+    color: green;
+}
+
+.jedan {
+    color: blue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+}
+
+p {
+    color: orange;
+}
+a {
+    color: red;
+}
+
+a:hover {
+    color: green;
+}
