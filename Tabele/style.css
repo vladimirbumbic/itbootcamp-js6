@@ -1,0 +1,27 @@
+table, th, td {
+    border: 1px solid gray;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+
+#zutaboja {
+    background-color: yellow;
+}
+
+.zuto {
+    background-color: yellow;
+}
+
+.prvatabela tr:nth-child(odd){
+    font-style: italic;
+
+}
+
+.drugatabela tr:nth-child(3n){
+    color: blue;
+}
+
+
+.drugatabela tr:nth-child(even):hover {background-color:yellow;}
+
