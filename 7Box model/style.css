@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; /* skida podrazumevani margin i pading, jer brovser uvek dodaje neki svoj po difoltu. A onda kasnije dodajemo nase vrednosti*/
+}
+
+a {/*
+    border-style: dashed;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 30%;
+    border-left-width: 5px;
+    border-left-style: solid;
+    */
+    border: 2px dashed black;
+    border-left: 5px solid red;
+    margin: 10px 15px 20px 25px;
+    padding: 10px 20px;
+    background-color: cadetblue;
+    width: 200px;
+    height: 45px;
+
+/*a tag je inline, ne moze se promeniti width i height*/
+}
+
+#jedan{
+    border: 1px solid black;
+    background-color: darksalmon;
+    margin: 10px 1px;
+    padding: 2px 60px;
+    
+    
+    
+}
+
+#dva{
+    border: 1px solid black;
+    padding: 2px 60px;
+    background-color: gray;
+    margin: 10px 1px;
+    
+}
+
+p{
+    border: 2px solid green;
+    margin: 10px;
+    padding: 10px;
+    background-color: coral;
+    width: 350px;
+    height: 50px; 
+    /* p tag je block i moze se promeniti width i height*/
+}
+
+/*
+    display svojstvo
+
+    BLOCK(moze se promeniti width, height, i redjaju se jedan ispod drugog
+        p, div, h1,2,6, table
+
+    INLINE(ne moze da se promeni width, height
+        a, span, td
+
+    Inline-BLOCk(to je inline kome moze da se podesi width i height)
+*/
+
+#s1, #s2 {
+    border: 2px solid black;
+    margin: 20px;
+    padding: 15px;
+    display: inline-block; /*sa ovim mozemo da primenimo*/
+    width:50% ; /* ne moye da stane sa 50% jedan do drugog*/
+    height:30px ;
+}
+
+/*
+    ukupan prostor= WIDTH/HEIGHT + PADDING + border+ margin
+*/
