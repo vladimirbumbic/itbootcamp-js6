@@ -1,0 +1,16 @@
+#float{
+    background-color: crimson;
+    overflow: hidden;/* stoji zato sto je parent za paragrafe*/
+    
+}
+
+#float p{
+    background-color: darkgrey;
+    float: left; /* float uvek ide unutar parenta, u ovom slucaju div-a*/
+    width: 250px;
+    margin:20px;
+}
+
+#float p:first-child{
+    float: right;
+}

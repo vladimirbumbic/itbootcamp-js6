@@ -1,0 +1,25 @@
+header{
+    background-image: url(hqdefault.jpg);
+    height: 150px;
+    position: relative;
+    
+}
+div{
+    color: white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+}
+
+div#jedan{
+    position: absolute;
+    background-color: red;
+    height: 200px;
+    left: 130px;
+    top: 30px;
+    z-index: -1;
+}
+
+
+

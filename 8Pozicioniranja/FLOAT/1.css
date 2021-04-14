@@ -1,0 +1,24 @@
+div{
+    float: left;
+}
+
+p{
+    text-align: center;
+}
+#jedan{
+    position: relative;
+    top: 20px;
+    left: 10%;
+}
+
+#dva{
+    position: absolute;
+    top: 20px;
+    left: 40%;
+}
+
+#tri{
+    position: absolute;
+    top: 20px;
+    right: 10%;
+}

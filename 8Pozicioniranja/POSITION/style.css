@@ -1,0 +1,50 @@
+*{
+    margin: 0;/* zvezdica se odnosi na sve na stranici*/
+    padding: 0;
+}
+#div1{
+    background-color: brown;
+    width: 400px;
+    height: 200px;
+    position: relative;/* da bi top i left radilo, mora da se stavi position*/
+    top: 40px;
+    left: 25%;
+    z-index: 1;
+}
+
+.news{
+    background-color: cadetblue;
+    width: 350px;
+    height: 250px;
+    position: relative;/*ukoliko bi bilo bez ovog, slika bi se pozicionirala u odnosu na body, jer ce on biti parent img-u, a ne taj .news*/
+    left: 40px;
+    
+    
+}
+
+.news img{
+    width: 40%;
+    position:absolute;/* posisn u odnosu na parent element, a to je ovde na div*/
+    top: 40px;
+    left: 20px;
+}
+
+.news h5{
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    margin: 0;/* trebaju nula da bi bilo na istoj visini kao slika*/
+    padding: 0;
+}
+
+footer{
+    background-color: coral;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
