@@ -8,6 +8,8 @@ nav{
     position: fixed;
     top: 0;
     width: 100%;
+   /* left: 50%;
+    transform: translateX(-50%)    da probam margin -50 da bi bio centriran*/
 }
 
 nav ul{/* ul se ponasa kao parent li-jevima*/

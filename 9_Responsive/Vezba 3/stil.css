@@ -1,0 +1,52 @@
+header{
+    background-color: aqua;
+    text-align: center;
+    padding: 15px 0px;
+}
+
+/* Navigacija*/
+nav ul{
+    list-style-type: none;
+    background-color: darkturquoise;
+}
+
+nav ul li{
+    padding: 10px; /* zbog ovog nisu klikljive ivice biljke, a da bi to bilo, premestimo taj padding i ispod u nav ul li a*/
+    border-bottom: 1px solid aqua;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    display: block; /* da bi celo polje bilo klikljivo, a ne samo "biljke"*/
+    padding: 10px;
+}
+
+nav ul li:hover{
+    background-color: aqua;
+}
+
+/*Aside i Text-section*/
+aside, .gradient{
+    background-image: linear-gradient(darkturquoise, white); /*Da probam da namestim visinu i sirinu*/
+}
+
+/*Images*/
+section img{
+    max-width: 100%; /* kad se ovo ne stavi, pojede deo slike. Probaj bez*/
+}
+
+/*Footer*/
+footer{
+    background-color: aqua;
+    padding: 5px 0px;
+    text-align: center;
+
+/*Fiksiranje za donju ivicu*/
+    position: fixed;
+    bottom: 0;
+}
+
+.gradient{
+    margin-bottom: 30px;  /* jer se bez ovog preklapa futer sa elementom iznad*/
+}                         /* podigenmo visinu futera, jer je fiksiran za donju ivicu*/

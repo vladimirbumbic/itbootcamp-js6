@@ -10,21 +10,73 @@
 .row{
     border: 1px solid red;
     width: 100%;
-    overflow: hidden; /*da bi zauzeo visinu svog potomka*/
+    overflow: hidden; /*da bi zauzeo visinu*/
 }
 
 [class*="col-"] { /*rasporedjuje sve koji imaju col-*/
     float: left;
 }
-                    /* do 1000px svi elementi ce biti 100% sirine*/
-@media only screen and (max-width: 1000px){
+  /*Za mobilne uredjaje*/        /* do 1000px svi elementi ce biti 100% sirine*/
+@media only screen and (max-width: 450px){
     [class*="col-"]{
         width: 100%;
     }
 
 }
-                    /* sve preko 1000px ce biti kako pise u col-ovima1*/
-@media only screen and (min-width: 1000px){
+ /*Za tablest*/
+ @media only screen and (min-width: 451px) and (max-width: 800px){
+    .col-t-1{
+        width: 8.33%; /* jedna dvanaestina*/
+    }
+    .col-t-2{
+        width: 16.66%;
+    }
+    
+    .col-t-3{
+        width: 25%;
+    }
+    
+    .col-t-4{
+        width: 33.33%;
+    }
+    
+    .col-t-5{
+        width: 41.66%;
+    }
+    
+    .col-t-6{
+        width: 50%;
+    }
+    
+    .col-t-7{
+        width: 58.33%;
+    }
+    
+    .col-t-8{
+        width: 66.33%;
+    }
+    
+    .col-t-9{
+        width: 75%;
+    }
+    
+    .col-t-10{
+        width: 83.33%;
+    }
+    
+    .col-t-11{
+        width: 91.66%;
+    }
+    
+    .col-t-12{
+        width: 100%;
+    }
+
+ } 
+
+
+ /*Za desktop uredjaje*/                   /* sve preko 1000px ce biti kako pise u col-ovima1*/
+@media only screen and (min-width: 801px){
     .col-1{
         width: 8.33%; /* jedna dvanaestina*/
     }
