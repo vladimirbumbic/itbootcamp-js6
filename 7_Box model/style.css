@@ -20,7 +20,8 @@ a {/*
     width: 200px;
     height: 45px;
 
-/*a tag je inline, ne moze se promeniti width i height*/
+/*a tag je inline, ne moze se promeniti width i height
+  Probaj da stavis display:inline-block, ili samo block, pa da vidis visinu i sirinu*/
 }
 
 #jedan{
@@ -67,7 +68,7 @@ p{
     margin: 20px;
     padding: 15px;
     display: inline-block; /*sa ovim mozemo da primenimo*/
-    width:50% ; /* ne moye da stane sa 50% jedan do drugog*/
+    width:50% ; /* ne moze da stane sa 50% jedan do drugog*/
     height:30px ;
 }
 
