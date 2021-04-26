@@ -481,7 +481,7 @@ else{
 
 //20.Zadatak
 let nekiBroj = 24;
-let nekiDrugiBroj = 22;
+let nekiDrugiBroj = 122;
 if(nekiBroj > nekiDrugiBroj){
       if(nekiBroj % 2 ==0){
     console.log(`nekiBroj je veci i paran`);}
@@ -489,11 +489,13 @@ if(nekiBroj > nekiDrugiBroj){
         console.log(`nekiBroj je veci, ali nije paran`);
     }
 }
- else if (nekiDrugiBroj > nekiBroj){
-    if(nekiDrugiBroj % 2 == 0){
+ else{ 
+     if (nekiDrugiBroj > nekiBroj){
+     if(nekiDrugiBroj % 2 == 0){
         console.log(`nekiDrugiBroj je veci i paran`)
     }
-else{
-    console.log(`nekiDrugiBroj je veci, ali nije paran`)
 }
+      else{
+        console.log(`nekiDrugiBroj je veci, ali nije paran`)
 }
+ }
