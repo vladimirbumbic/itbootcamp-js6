@@ -90,3 +90,4 @@ let novacDinari = 2000;
 let dinariUEvre = novacDinari / kursEvra;
 console.log(dinariUEvre);
 
+

@@ -35,7 +35,6 @@ console.log(x, y);
 const pi = 3.14;
 console.log(pi);
 
-// pi = 3.1415;  // ne mozemo ponovo dodeliti vrednost konstanti
 // const pi = 3.1415; //ne mozemo ponovo deklarisati konstantu
 
 let o = 2 * 5 * pi //ovako npr. moze
@@ -49,7 +48,7 @@ console.log(a);  //undefined  vrednost promenljive, jer nismo rekli sta se nalaz
 let recenica = "JS kaze:\" Hello world! \" ";
 console.log(recenica);
 
-recenica = ' JS kaze: " Ili kupi alat, il ostavi zanat! " ' //levi ukoseni navodnik nadji
+recenica = ` JS kaze: " Ili kupi alat, il ostavi zanat! " `
 console.log(recenica);
 
 let god;
@@ -85,7 +84,7 @@ p += 3; // ekvivalentno p = p + 3;
 console.log(p); //10- zato sto smo stavili gore da je p=7
 
 p -= 5; // p = p - 5;
-console.log(p); //i ovde sad ide 10-5=5
+console.log(p); //sad je p=10
 
 //++ Povecava vrednost promenljive za 1
 console.log(p);  //5
