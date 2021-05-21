@@ -61,7 +61,7 @@ let ime = "Jelena";
 let prezime = "Matejic";
 let imePrezime = ime + " " + prezime; // "" stavimo da bi bio razmak
 console.log(imePrezime);
-console.log(ime.length + prezime.length); // ako bude ime.length + "" + prezime.length bice samo -6 7-  ne mogu se sabirati brojevi i reci:P
+console.log(ime.length + prezime.length);
 
 //Osnovne aritmeticke operacije
 let p = 7;

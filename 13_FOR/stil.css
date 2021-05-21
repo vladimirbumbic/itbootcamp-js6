@@ -1,0 +1,28 @@
+td{
+    border: 1px solid black;
+}
+table{
+    border-collapse: collapse;
+}
+
+.boja1{
+    background-color: indianred;
+}
+
+.boja2{
+    background-color: lightgrey;
+}
+
+.ljubicasti{
+    color: purple;
+}
+
+span{
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 70px;
+    display: inline-block;
+    margin-bottom: 20px;
+}

@@ -439,7 +439,7 @@ if ( xe < min ) {
 mid = zbir - max - min;
 console.log (`${max} je najveci, ${mid} je srednji, ${min} je najmanji.`);
 //2.nacin
-/*let c1 = 23;
+let c1 = 23;
 let c2 = 31;
 let c3 = 13;
 if ( c1 > c2 && c1 > c3){
@@ -466,7 +466,7 @@ if ( c3 > c2 && c3 > c1){
         console.log(`broj ${c2} je srednji, a broj ${c1} najmanji`);
     }   
 }
-*/
+
 
 //18.Zadatak
 let bv = 4.5;

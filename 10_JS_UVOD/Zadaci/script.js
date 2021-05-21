@@ -23,11 +23,12 @@ console.log(kusur);
 let kusur2 =un - cr2;
 console.log(kusur2);
 
-
+//5. zadatak
+//Ispisati u konzoli današnji datum u formatima dd.mm.yyyy. i yyyy/mm/dd.
 let da = 20;
 let me = 04;
 let go = 2021;
-let datum1 = "da" + "." + "me" + "." + "go" + ".";
+let datum1 = da + "." + me + "." + go + ".";
 console.log(datum1);
 let datum2 = "go" + "/" + "me" + "/" + "da" + ".";
 console.log(datum2);
@@ -43,7 +44,7 @@ console.log(datum2);
 let minOdPonoci = 123; // 123 / 60 = 2 (ost 3) dakle 2 sata i 3 min
 let h = Math.floor (minOdPonoci/60); //ova funkcija zaokruzuje na donji ceo broj,  Math.round zaokruzuje na najpriblizniji ceo broj, Math.ceil zaokruzuje na gornji ceo broj
 let min = minOdPonoci % 60;
-console.log(h, ":", + min);
+console.log(h+ ":" + min);
 
 //2.nacin
 min = minOdPonoci % 60;
@@ -75,8 +76,7 @@ let trenutnoMinuta = date.getMinutes();
 let trenutnoOdPonoci = trenutnoSati*60 + trenutnoMinuta;
 console.log(trenutnoOdPonoci);
 
-//5. zadatak
-/*Ispisati u konzoli današnji datum u formatima dd.mm.yyyy. i yyyy/mm/dd.
+
 
 //6. zadatak
 /*evro u dinare*/
@@ -90,4 +90,11 @@ let novacDinari = 2000;
 let dinariUEvre = novacDinari / kursEvra;
 console.log(dinariUEvre);
 
+//8.zadatak
+let c = 1;
+let f = c*1.8 +32;
+console.log(f);
 
+f = 1;
+c = (f-32)/1.8;
+console.log(c);
