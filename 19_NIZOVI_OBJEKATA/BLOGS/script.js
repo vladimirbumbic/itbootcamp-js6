@@ -78,7 +78,7 @@ let viseLajkova = nizObj=>{
     nizObj.forEach(elem=>{ //blog1-blog2-blog3
         if(elem.likes>elem.dislikes){
             console.log(elem.title);
-           // lista+=`<ul> ${element.title}</ul>`
+           // lista+=`<li> ${elem.title}</li>`
         }
     });
    // lista+="</ul>";
