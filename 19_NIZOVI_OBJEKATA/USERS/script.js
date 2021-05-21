@@ -98,6 +98,7 @@ users.forEach(user=>{
     let sumLikes=0;
     userBlogs.forEach(blog=>{
         sumLikes+=blog.likes;
+        console.log(blog.likes); //50+170+205-s... 170,205-j... 50,170-m
     });
     if(sumLikes>100){
         console.log(user.username);
