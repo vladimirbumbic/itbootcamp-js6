@@ -51,7 +51,7 @@ let user2={
 let user3={
     username:"Milena",
     age:14,
-    blogs: [blog1, blog2],
+    blogs: [blog1],
     sumLikes:function(){
         let sum =0;
         this.blogs.forEach(blog=>{
@@ -127,4 +127,34 @@ users.forEach(user=>{
     if(likes>100){
         console.log(user.username);
     }
-})
+});
+
+// Ispisati naslove onih blogova koji imaju natprosečan broj pozitivnih ocena
+let avgGeneral; //Prosecna ocena u odnosu na sve blogove svih korisnika. Moze i da se stavi let avgGeneral=0;
+let sumGeneral = 0;
+let countGeneral = 0;
+//1. nacin odredjivanja proseka
+users.forEach(user=>{
+    user.blogs.forEach(blog=> { //uzmemo blogove korisnika i krecemo se kroz njih
+        sumGeneral+=blog.likes;
+        countGeneral+=1;
+    });
+});
+avgGeneral = sumGeneral / countGeneral;  //odredjujemo prosek svih blogova korisnika
+console.log(avgGeneral);
+
+//2. nacin iskoriscavanje sumLikes od gore
+/*user.forEach(user=>{
+    sumGeneral+= user.sumLikes() // sumLikes od S, J i M
+    countGeneral +=user.blogs.length;
+});
+avgGeneral = sumGeneral / countGeneral;
+console.log(avgGeneral);
+*/
+users.forEach(user=>{
+    user.blogs.forEach(blog=>{
+        if(blog.likes>avgGeneral){
+            console.log(blog.title);
+        }
+    });
+});
