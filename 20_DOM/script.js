@@ -95,3 +95,78 @@ slike.forEach(elem=>{
 for(let i=0;i<slike.length;i++){
     console.log(slike[i]);
 }
+
+
+//Menjanje elemenata iz HTML-a
+console.log(r1.id);
+console.log(r1.href);
+console.log(r1.innerHTML);
+r1.innerHTML="Sadrzaj div elemenata je tekst dodat iz javascripta"  //pregazimo stari sadrzaj iz html-a
+//r1.innerHTML += "Sadrzaj div elemenata je tekst dodat iz javascripta" //dodamo na onaj iz htmla... otkomentarisi pa vidi
+
+let prviLink = document.querySelector("a"); //dohvatimo prvi link u html-u
+prviLink.href = "http://www.wikipedia.com";
+
+prviLink.setAttribute("target", "_blank");
+//prviLink.target = "_blank";
+prviLink.setAttribute("href", "http://www.wikipedia.org");
+prviLink.innerHTML = "Wikipedia";
+
+// U CSS-u bi bilo------
+//  a:first-child{
+//  color:red;
+//  background-color:ByteLengthQueuingStrategy;
+//     }
+prviLink.style.color="red";
+prviLink.style.background = "blue";
+prviLink.style.textDecoration = "none";
+prviLink.style.border = "3px solid black";
+//  ili
+prviLink.style.borderWidth = "3px";
+prviLink.style.borderStyle = "solid";
+prviLink.style.borderColor = "black";
+//
+
+prviLink.setAttribute("style", "color:red; background-color:blue; text-decoration:NamedNodeMap; border : 3px solid black;")
+
+r1.style.color = "green";
+
+//Postaviti crveni border svim linkovima na stranici
+r7.forEach(link=>{
+    link.style.border = "3px solid red"
+});
+
+//Drugi nacin
+let linkovi = document.getElementsByTagName("a");
+for(let i =0; i< linkovi.length;i++){
+    linkovi[i].style.border = "3px solid green";
+}
+
+//Selektovati sve paragrafe i u svakom od njih pridodati tekst "VAZNO"
+let paragrafi = document.querySelectorAll("p");
+paragrafi.forEach(paragraf=>{
+    paragraf.innerHTML += "VAZNO";
+});
+
+
+//Svim divovima na stranici sa klasom "error" dodati po jedan naslov najvece velicine sa tekstom "Greska!".
+ let errorDiv = document.querySelectorAll ("div.error");
+ errorDiv.forEach(er=>{
+     er.innerHTML += "<h1>Greska!</h1>";
+ });
+
+
+//Neka je n broj paragrafa u datom dokumentu. U svakom i -tom paragrafu dodati i**2, za svako i=1,2,... , n
+for(let i=0; i<paragrafi.length;i++){
+    paragrafi[i].innerHTML += (i+1)**2;
+}
+
+paragrafi.forEach((par, i) =>{
+    par.innerHTML*= (i+1)**2;
+});
+//Svim slikama dodati alternativni tekst
+
+
+//Svim paragrafima postaviti atribut style tako da budu obojeni ljubicastom bojom
+
+//Svim parnim paragrafima na stranici postaviti pozadinsku zelenu boju, a svim neparnim paragrafima postaviti pozadinsku crvenu boju
