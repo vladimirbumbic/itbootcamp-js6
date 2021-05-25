@@ -29,7 +29,7 @@ r2.forEach(obj => {
 });
 */
 
-//Prolazak kroz elemente HZMLCollection for petljom
+//Prolazak kroz elemente HTMLCollection for petljom
 for(let i=0; i<r2.length; i++){
     console.log(r2[i]);
 }
