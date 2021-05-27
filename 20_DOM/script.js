@@ -306,7 +306,7 @@ paragrafi.forEach((elem,i)=>{
 //2.
 paragrafi = document.querySelectorAll ("p");
 paragrafi.forEach(p=>{
-    if(p.textContent.includes("error")){
+    if(p.textContent.includes("error")){ //ili p.innerHTML.includes...
         p.classList.add("error");
     }
     if(p.textContent.includes("success")){
@@ -316,10 +316,25 @@ paragrafi.forEach(p=>{
 //3.
 paragrafi = document.querySelectorAll ("p");
 paragrafi.forEach(p=>{
-    if(p.classList.contains("error")){
-        p.classList.remove("error");
-    }
-    else{
         p.classList.toggle("error");
-    }
 });
+
+//4.
+//////////////////////////////////////
+
+let noviParagraf=document.createElement("p");
+noviParagraf.classList.add("klasa");
+noviParagraf.id="aj-di";
+noviParagraf.innerHTML="Tekst novog paragrafa";//ne vidi se nigde trenutno
+
+let noviDiv =document.getElementById("div2");
+noviDiv.appendChild(noviParagraf); //dodamo ga
+// document.body.appendChild(noviParagraf);
+
+let noviLink=document.createElement("a");
+noviLink.textContent="Klikni me";
+noviLink.href="http://www.google.com";
+noviParagraf.appendChild(noviLink);
+//noviParagraf.removeChild(noviLink);
+
+//noviDiv.innerHTML += `<p class="klasa" id="aj-di">Tekst novog paragrafa</p>`; //ukoliko ne zelimo da se vracamo vise ovde ovoj klasi

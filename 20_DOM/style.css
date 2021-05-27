@@ -1,10 +1,10 @@
 .error{
-    color: red;
+    color: red !important;
     border: solid 1px red;
 }
 
 .success{
-    color: green;
+    color: green !important;
     border: solid 1px green;
 }
 
