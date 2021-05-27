@@ -102,7 +102,7 @@ console.log(r1.id);
 console.log(r1.href);
 console.log(r1.innerHTML);
 r1.innerHTML="Sadrzaj div elemenata je tekst dodat iz javascripta"  //pregazimo stari sadrzaj iz html-a
-//r1.innerHTML += "Sadrzaj div elemenata je tekst dodat iz javascripta" //dodamo na onaj iz htmla... otkomentarisi pa vidi
+//r1.innerHTML += "Sadrzaj div elemenata je tekst dodat iz javascripta" //dodamo na onaj iz htmla...
 
 let prviLink = document.querySelector("a"); //dohvatimo prvi link u html-u
 prviLink.href = "http://www.wikipedia.com";
@@ -127,7 +127,7 @@ prviLink.style.borderStyle = "solid";
 prviLink.style.borderColor = "black";
 //
 
-prviLink.setAttribute("style", "color:red; background-color:blue; text-decoration:NamedNodeMap; border : 3px solid black;")
+prviLink.setAttribute("style", "color:red; background-color:blue; text-decoration:none; border : 3px solid black;")
 
 r1.style.color = "green";
 
@@ -143,11 +143,10 @@ for(let i =0; i< linkovi.length;i++){
 }
 
 //Selektovati sve paragrafe i u svakom od njih pridodati tekst "VAZNO"
-let paragrafi = document.querySelectorAll("p");
-paragrafi.forEach(paragraf=>{
-    paragraf.innerHTML += "VAZNO";
-});
-
+let paragrafi = document.querySelectorAll ("p");
+paragrafi.forEach(p=>{
+    p.innerHTML += " VAZNO";
+})
 
 //Svim divovima na stranici sa klasom "error" dodati po jedan naslov najvece velicine sa tekstom "Greska!".
  let errorDiv = document.querySelectorAll ("div.error");
@@ -160,13 +159,167 @@ paragrafi.forEach(paragraf=>{
 for(let i=0; i<paragrafi.length;i++){
     paragrafi[i].innerHTML += (i+1)**2;
 }
-
+/*
 paragrafi.forEach((par, i) =>{
     par.innerHTML*= (i+1)**2;
-});
+});*/
 //Svim slikama dodati alternativni tekst
-
+slike=document.querySelectorAll("img");
+slike.forEach(sl=>{
+    sl.alt+= "avioni";
+});
 
 //Svim paragrafima postaviti atribut style tako da budu obojeni ljubicastom bojom
+paragrafi.forEach(boja=>{
+    boja.style.color="purple";
+});
 
 //Svim parnim paragrafima na stranici postaviti pozadinsku zelenu boju, a svim neparnim paragrafima postaviti pozadinsku crvenu boju
+for(let i=0;i<paragrafi.length;i++){
+    if(i%2==0){
+        paragrafi[i].setAttribute("style","background-color:green");
+    }
+    else{
+        paragrafi[i].setAttribute("style","background-color:red");
+    }
+}
+///////////////////////////////////
+/*paragrafi.forEach((elem, i) =>{
+    if(i%2==0){
+        elem.setAttribute("style","background-color:green");
+    }
+    else{
+        elem.setAttribute("style","background-color:red");
+    }
+});*/
+
+//7.
+r7 = document.querySelectorAll("a");
+r7.forEach((elem, i)=>{
+    elem.setAttribute("style", "padding:5px; font-size:18px; text-decoration:none;");
+    if(i%2==0){
+        elem.style.color="purple";
+        elem.style.backgroundColor="green";
+    }
+    else{
+        elem.style.color="white";
+        elem.style.backgroundColor="blue";
+    }
+});
+
+//8.
+slike= document.querySelectorAll("img");
+slike.forEach(s=>{
+    if(s.src.includes(".png")){ // (s.src.includes(".PNG")
+        s.style.border="2px solid red"
+    }
+});
+///////////////////////////////////////////////////
+/*let slike2=document.querySelectorAll(`img[src*=".png"]`); // *= znaci da sadrzi
+slike2.forEach(s=>{
+    s.style.border="2px solid red"
+});
+*/ 
+
+//9.
+sviLinkovi = document.querySelectorAll("a");
+sviLinkovi.forEach(link=>{
+    if(link.target == "_blank"){
+        link.target = "_top";
+    }
+    else{
+        link.target="_blank";
+    }
+});
+
+//10.
+let imena =[ "Stefan", "Mladen", "Jelena", "Stefan Dj"];
+imena.forEach(ime=>{
+   if(ime[0]=="S"){ // if(ime.startsWith("S"))
+       document.body.innerHTML += `<a href="#" target="_blank">${ime}</a>`;
+   }
+   else{
+    document.body.innerHTML += `<a href="#">${ime}</a>`;
+   }
+});
+////////////////////////////////////
+let result = "<ul>";
+imena.forEach((ime, i)=>{
+    if(i%2==0){
+        result+= `<li style="color:blue"> ${ime}</li>`;
+    }
+    else{
+        result+= `<li style="color:red"> ${ime}</li>`;
+    }
+});
+result += "</ul>";
+document.body.innerHTML += result;
+//////////////////////////////////////
+
+let tabela ="<table>";
+imena.forEach(ime=>{
+    tabela += `<tr><td>${ime}</td></tr>`;
+});
+tabela += "</table>";
+document.body.innerHTML += tabela;
+
+/////////////////////////////////////////////////////////////////
+
+//Dohvatanje roditeljskog cvora
+sviLinkovi = document.querySelectorAll("a");
+
+sviLinkovi.forEach(link => {
+    console.log(link.parentNode);
+    link.parentNode.style.border="2px solid red";
+});
+
+//Dohvatanje deteta nekog cvora
+let prviDiv = document.querySelector("div.container");
+console.log(prviDiv.childNodes[1]);
+prviDiv.childNodes.forEach(child=>{
+    console.log(child);
+});
+
+let n = prviDiv.childNodes.length;
+for(let i=0;i<n;i++){
+    console.log(prviDiv.childNodes[i]);
+}
+
+let link1 = prviDiv.childNodes[1];
+console.log(link1.previousSibling);
+console.log(link1.nextSibling);
+console.log(link1.nextSibling.nextSibling);
+
+link1.nextSibling.nextSibling.style.fontSize="90px";
+
+///////////////////////////////
+//1.
+paragrafi.forEach((elem,i)=>{
+    if(i%2==0){
+        elem.classList.add("error");
+    }
+    else{
+        elem.classList.add("success");
+    }
+});
+
+//2.
+paragrafi = document.querySelectorAll ("p");
+paragrafi.forEach(p=>{
+    if(p.textContent.includes("error")){
+        p.classList.add("error");
+    }
+    if(p.textContent.includes("success")){
+        p.classList.add("sucess");
+    }
+});
+//3.
+paragrafi = document.querySelectorAll ("p");
+paragrafi.forEach(p=>{
+    if(p.classList.contains("error")){
+        p.classList.remove("error");
+    }
+    else{
+        p.classList.toggle("error");
+    }
+});
