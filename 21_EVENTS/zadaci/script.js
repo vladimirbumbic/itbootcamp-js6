@@ -46,5 +46,5 @@ minus.addEventListener("click", ()=>{
    
 });
 
-//4. Dopuniti prethodni zadatak uslovima, tako da se na ekranu prikazuju samo pozitivni brojevi. Ukoliko je vrednost manja od nule, na ekranu nastaviti prikazivanje broja 0.
+
 
