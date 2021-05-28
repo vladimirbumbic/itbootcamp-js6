@@ -327,7 +327,7 @@ paragrafi.forEach((p,i)=>{
     else if(i%3==1){
         p.style.fontSize="20px";
     }
-    else if(i%3==0){
+    else if(i%3==2){
         p.style.fontSize="25px";
     }
 });
