@@ -101,7 +101,7 @@ btnKv.addEventListener("click", (e)=>{
 
 btnPr.addEventListener("click", e=>{
     let broj= inputPrepolovi.value;
-    pDva.innerHTML = `${broj/2}`;
+    pDva.innerHTML = `${broj/2}`; //  pDva.innerHTML = Number (broj/2)  pretvara string u broj, ukoliko je input type text u htmlu, a ne input type number
     e.preventDefault();
 });
 
@@ -110,6 +110,12 @@ btnPo.addEventListener("click", e=>{
     pTri.innerHTML = broj**2*3.14;
     e.preventDefault();
 });
+/*
+let broj= inputPovrsina.value**2;
+let pi=3.14;
+pTri.innerHTML = broj* Math.PI;
+*/
+
 
 //PRIMER
 let forma = document.getElementById("forma");
