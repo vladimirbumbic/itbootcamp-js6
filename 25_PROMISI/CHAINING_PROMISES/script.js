@@ -9,7 +9,7 @@ request.open("GET", resource)
 // 3. Saljemo request
 request.send();
 
-return new Promise( (resolve, reject)=>{
+return new Promise( (resolve, reject)=>{ //new -pravi novi objekat
     request.addEventListener("readystatechange",()=>{
         if(request.readyState==4 && request.status==200){
             //Aok je sve OK
