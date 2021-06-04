@@ -29,8 +29,7 @@ return new Promise( (resolve, reject)=>{
 getTodos("../JSON/fruits.json").then(data=>{
     console.log("Promise fruits resolved", data);
    return getTodos("../JSON/vegetables.json");
-})
-.then(data=>{
+}).then(data=>{
     console.log("Promise vegetables resolved", data);
     return getTodos("../JSON/cereals.json")
 }).then(data=>{
