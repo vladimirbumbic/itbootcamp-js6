@@ -1,0 +1,29 @@
+h1 {
+    color: cornflowerblue;
+    margin-left: 45px;
+}
+
+li{
+    list-style-type: none;
+    background-color: lightblue;
+    padding: 5px;
+    margin :5px;
+    border: 2px dotted blue;
+    width: 200px;
+}
+
+/*
+.mojaLista li{
+    background-color: lightblue;
+    padding: 10px;
+    border: 1px solid blue;
+    margin: 10px;
+    font-weight: bold;
+}
+
+
+ .precrtano{
+     text-decoration: line-through;
+ }
+ 
+ */
