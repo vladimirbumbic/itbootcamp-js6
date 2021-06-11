@@ -73,7 +73,6 @@ let najmanjaOcenaNajboljeg = niz =>{
 }
 console.log(najmanjaOcenaNajboljeg(nizFilmova));
 
-
 //Napisati funkciju najmanjaOcena kojoj se prosleđuje niz filmova, a koja vraća koja je najmanja ocena koju je bilo koji film dobio.
 
 let najmanjaOcena = niz =>{
