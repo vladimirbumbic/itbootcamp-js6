@@ -132,11 +132,13 @@ let b6 = document.getElementById("b6");
 let input = document.getElementById("inp");
 let timer = null;
 input.value=1;
-
+//let br=0;
 
 b5.addEventListener("click", ()=>{
     if(timer===null){
         timer=setInterval(()=>{
+            //br++;
+            //input.value=br;
             input.value++;
         },1000)
     }
