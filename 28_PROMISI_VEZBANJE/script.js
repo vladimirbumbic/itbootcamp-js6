@@ -30,7 +30,7 @@ getItems("json/stock.json", data => {
     //console.log(data);
     data.forEach(item => { //za svaki artiklal u stock.json
         if (item.stock == 0) {
-            itemsNoStock.push(item.id); //previse da se sastoji iz objekata, dapusujemo ceo objekat, pa mu stavimo samo njegov id
+            itemsNoStock.push(item.id); //previse da se sastoji iz objekata, da pusujemo ceo objekat, pa mu stavimo samo njegov id
             //to su id-ovi onih koje nemamo na stanju tj. stock=0
         }
     });
