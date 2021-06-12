@@ -104,6 +104,7 @@ function getItemsReturnPromise(resource) {
     });
    
 }
+// formOrder.addEventListener("submit", click2=(event)=>{;  ili ovako
 let click2= event =>{
     event.preventDefault();
     let capacity = inputOrder.value;
@@ -161,6 +162,6 @@ let click2= event =>{
     .catch((error)=>{
         console.log(error);
     })
-}
-    
+} //);
+   
 formOrder.addEventListener("submit", click2);
