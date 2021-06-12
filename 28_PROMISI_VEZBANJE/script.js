@@ -83,7 +83,7 @@ getItems("json/stock.json", data => {
 //formOrder.addEventListener("submit", click1);
 
 /////////////////////////////////////////////////////////////////////
-// Promis je objekat kji ceka asinhroni poziv
+// Promis je objekat koji ceka asinhroni poziv
 // Zahvaljujuci njemu postoje then() i catch() metode
 function getItemsReturnPromise(resource) {
     return new Promise((resolve, reject)=>{
