@@ -107,6 +107,8 @@ function getItemsReturnPromise(resource) {
 // formOrder.addEventListener("submit", click2=(event)=>{;  ili ovako
 let click2= event =>{
     event.preventDefault();
+    //let tabela=document.createElement("table");
+    //divOrder.appendChild(tabela);
     let capacity = inputOrder.value;
     let itemsNoStock =[];
     getItemsReturnPromise("json/stock.json")
@@ -145,16 +147,35 @@ let click2= event =>{
     .then(data=>{
         if(data !== undefined){ //zato sto...
         let totalPrice = 0;
+        let tabela=document.createElement("table");
+        divOrder.appendChild(tabela);
                 data.forEach(item => {
                     if (itemsNoStock.includes(item.id)) {
+                        let red = document.createElement("tr");
+                        let kolona = document.createElement("td");
+                        kolona.textContent=item.item;
+                        let kolona2= document.createElement("td");
+                        kolona2.textContent=item.price;
+                        red.appendChild(kolona);
+                        red.appendChild(kolona2);
+                        tabela.appendChild(red);
                         totalPrice += item.price;
                     }
                 });
-                let pMessage = document.createElement("p"); //moze isto pMessage jer let vazi u bloku gde je definisan
-                pMessage.style.fontWeight = "bold";
-                pMessage.style.fontSize = "24px";
-                pMessage.textContent = `Total order price : ${totalPrice}RSD`
-                divOrder.appendChild(pMessage);
+                let red2=document.createElement("tr");
+                let kolona3=document.createElement("td");
+                let kolona4=document.createElement("td");
+                kolona3.textContent="UKUPNO";
+                kolona4.textContent=totalPrice;
+                red2.appendChild(kolona3);
+                red2.appendChild(kolona4);
+                tabela.appendChild(red2);
+                tabela.setAttribute("border", "9");
+               // let pMessage = document.createElement("p"); //moze isto pMessage jer let vazi u bloku gde je definisan
+                //pMessage.style.fontWeight = "bold";
+                //pMessage.style.fontSize = "24px";
+                //pMessage.textContent = `Total order price : ${totalPrice}RSD`
+                //divOrder.appendChild(pMessage);
 
                 
             }
