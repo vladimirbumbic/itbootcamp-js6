@@ -185,4 +185,54 @@ let click2= event =>{
     })
 } //);
    
-formOrder.addEventListener("submit", click2);
+//formOrder.addEventListener("submit", click2);
+
+async function clickGetItems(){
+    let data1 = await getItemsReturnPromise("json/stock.json");
+    let capacity = inputOrder.value;
+    let itemsNoStock = [];
+        data1.forEach(item => {
+            if(item.stock == 0) {
+                itemsNoStock.push(item.id);
+            }
+        });
+    let data2 = await getItemsReturnPromise("json/weights.json");
+    let totalWeight = 0;
+        data2.forEach(item => {
+            //Da li niz itemsNoStock sadrzi item.id
+            if(itemsNoStock.includes(item.id)) {
+                totalWeight += item.weight;
+            }
+        });
+        //console.log(totalWeight);
+        let pMessage = document.createElement('p');
+        if(totalWeight > capacity) {            
+            pMessage.style.fontWeight = "bold";
+            pMessage.style.fontSize = "24px";
+            pMessage.textContent = "Not enough capacity in truck!!";
+        }
+        else {
+            let data3 = await getItemsReturnPromise("json/prices.json");
+            let totalPrice = 0;
+            data3.forEach(item => {
+                if(itemsNoStock.includes(item.id)) {
+                    totalPrice += item.price;
+                }
+            });
+            pMessage.style.fontWeight = "bold";
+            pMessage.style.fontSize = "24px";
+            pMessage.textContent = `Total order price: ${totalPrice}RSD`;            
+        }        
+        return pMessage;
+}
+let click3 = event => {
+    event.preventDefault();
+    clickGetItems()
+    .then(para => {
+        divOrder.appendChild(para);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+}
+formOrder.addEventListener("submit", click3);
