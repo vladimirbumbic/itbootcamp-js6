@@ -375,8 +375,9 @@ db.collection("tasks")
 //Su završeni,
 /*
 let datum3=new Date("2021-06-20")
+let datum = new Date()
 db.collection("tasks")
-.where("due_date", "<", datum3)
+.where("due_date", "<", datum3) //datum
 .get()
 .then(documents=>{
     documents.forEach(doc => {
@@ -393,8 +394,9 @@ db.collection("tasks")
 //Tek treba da počnu.
 /*
 let datum4=new Date("2021-06-14 09:30:00")
+let datum = new Date()
 db.collection("tasks")
-.where("start_date", ">", datum4)
+.where("start_date", ">", datum4) //datum
 .get()
 .then(documents=>{
     documents.forEach(doc => {
@@ -487,5 +489,39 @@ db.collection("movies")
 */
 
 //Prikazati sve informacije o najbolje rangiranom filmu.
+/*
+db.collection("movies")
+.orderBy("Rating", "desc")
+.limit(1)
+.get()
+.then(documents=>{
+    documents.forEach(doc => {
+        let t = doc.data();
+        let id= doc.id;
+        console.log(`Document ${id}:`);
+        console.log(t);
+    });
+})
+.catch(err=>{
+    console.log(`Error: ${err}`);
+});
+*/
 
 //Prikazati sve informacije o najslabije rangiranoj drami.
+/*
+db.collection("movies")
+.orderBy("Rating", "asc")
+.limit(1)
+.get()
+.then(documents=>{
+    documents.forEach(doc => {
+        let t = doc.data();
+        let id= doc.id;
+        console.log(`Document ${id}:`);
+        console.log(t);
+    });
+})
+.catch(err=>{
+    console.log(`Error: ${err}`);
+});
+*/
